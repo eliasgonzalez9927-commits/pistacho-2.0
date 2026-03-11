@@ -193,12 +193,12 @@ const Hero = () => {
     <section className="relative h-screen flex items-center overflow-hidden">
       <div className="absolute inset-0 z-0">
         <img 
-          src="https://picsum.photos/seed/pistachio-orchard/1920/1080" 
-          alt="Producción de Pistachos Greenlat" 
-          className="w-full h-full object-cover brightness-[0.7]"
+          src="https://picsum.photos/seed/aerial-pistachio-plantation-sanjuan/1920/1080" 
+          alt="Vista aérea de plantación de pistachos Greenlat en San Juan" 
+          className="w-full h-full object-cover brightness-[0.55]"
           referrerPolicy="no-referrer"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-charcoal/60 via-charcoal/20 to-transparent"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-charcoal/40 via-transparent to-charcoal/80"></div>
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 w-full">
