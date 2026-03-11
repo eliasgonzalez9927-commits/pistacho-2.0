@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://unpkg.com/leaflet@1.9.4/dist/leaflet.css');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --color-pistachio: #98A31E;
+  --color-pistachio-dark: #7A8218;
+  --color-sand: #F2EFE9;
+  --color-charcoal: #1A1A1A;
+  --color-earth: #8B7355;
+}
+
+@layer base {
+  body {
+    @apply bg-sand text-charcoal font-sans antialiased;
+    scroll-behavior: smooth;
+  }
+  
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .section-padding {
+    @apply py-24 px-6 md:px-12 lg:px-24;
+  }
+
+  .btn-primary {
+    @apply bg-pistachio text-sand px-8 py-4 rounded-none font-bold tracking-widest uppercase text-xs transition-all hover:bg-pistachio-dark cursor-pointer;
+  }
+
+  .btn-outline {
+    @apply border border-charcoal text-charcoal px-8 py-4 rounded-none font-bold tracking-widest uppercase text-xs transition-all hover:bg-charcoal hover:text-sand cursor-pointer;
+  }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-sand;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-pistachio/30;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-pistachio;
+}
